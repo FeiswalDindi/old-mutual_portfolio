@@ -1,0 +1,211 @@
+:root {
+    --bg-white: #FFFFFF;
+    --bg-off-white: #F9F9F9;
+    --gold-primary: #D4AF37;
+    --gold-hover: #B5952F;
+    --text-dark: #0A0A0A;
+    --text-muted: #4A4A4A;
+    --border-color: #EAEAEA;
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background-color: var(--bg-white); color: var(--text-dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.section-padding { padding: 120px 0; }
+.bg-alt { background-color: var(--bg-off-white); }
+.text-center { text-align: center; }
+
+/* --- Glassy Sticky Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 1.5rem 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 700; color: var(--gold-primary); font-size: 1.5rem; letter-spacing: 2px; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 2.5rem; }
+.nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease; }
+.nav-links a:hover { color: var(--gold-primary); }
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary, .btn-outline {
+    display: inline-block; padding: 1rem 2rem; text-decoration: none; font-weight: 600;
+    border-radius: 0; transition: var(--transition-smooth); cursor: pointer; font-size: 0.9rem;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+.btn-primary { background-color: var(--gold-primary); color: var(--bg-white); border: 1px solid var(--gold-primary); }
+.btn-primary:hover { background-color: var(--text-dark); border-color: var(--text-dark); }
+.btn-secondary { background-color: transparent; color: var(--text-dark); border: 1px solid var(--text-dark); }
+.btn-secondary:hover { background-color: var(--text-dark); color: var(--bg-white); }
+.btn-outline { border: 1px solid var(--gold-primary); color: var(--gold-primary) !important; padding: 0.6rem 1.5rem; }
+.btn-outline:hover { background-color: var(--gold-primary); color: var(--bg-white) !important; }
+
+/* --- Hero Section with Grid Layout --- */
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
+
+.subtitle { color: var(--gold-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1.5rem; font-size: 0.85rem; }
+.hero-title { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 2rem; color: var(--text-dark); letter-spacing: -1px; }
+.hero-title span { color: var(--gold-primary); }
+.hero-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 3rem; line-height: 1.8; }
+.hero-actions { display: flex; gap: 1.5rem; }
+
+/* Hero Image Styling */
+.image-frame {
+    position: relative;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    background: var(--bg-white);
+}
+.image-frame::after {
+    content: ''; position: absolute; top: 1.5rem; left: 1.5rem; right: -1.5rem; bottom: -1.5rem;
+    border: 2px solid var(--gold-primary); z-index: -1; transition: var(--transition-smooth);
+}
+.image-frame:hover::after { top: 0.5rem; left: 0.5rem; right: -0.5rem; bottom: -0.5rem; }
+.profile-img { width: 100%; height: auto; display: block; filter: grayscale(100%); transition: var(--transition-smooth); }
+.image-frame:hover .profile-img { filter: grayscale(0%); }
+
+/* --- Section Headers --- */
+.section-header { margin-bottom: 4rem; }
+.section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.5px; }
+.divider { height: 2px; width: 60px; background-color: var(--gold-primary); }
+
+/* --- Timeline Grid (Experience) --- */
+.timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.timeline-card { padding: 2.5rem; background: var(--bg-white); border: 1px solid var(--border-color); }
+.border-gold { border-top: 4px solid var(--gold-primary); }
+.border-dark { border-top: 4px solid var(--text-dark); }
+.timeline-date { font-size: 0.85rem; font-weight: 700; color: var(--gold-primary); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 1rem; }
+.timeline-role { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.timeline-org { font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
+.timeline-list { list-style: none; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+.timeline-list li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; }
+.timeline-list li::before { content: '▹'; position: absolute; left: 0; color: var(--gold-primary); font-weight: bold; }
+
+/* --- Skills Grid --- */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; border: 1px solid var(--border-color); }
+.skill-card { background-color: var(--bg-white); padding: 3rem 2rem; border-radius: 0; border: 1px solid var(--border-color); transition: var(--transition-smooth); margin: -1px 0 0 -1px; }
+.skill-card:hover { background-color: var(--bg-off-white); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.04); z-index: 2; position: relative; }
+.skill-icon { color: var(--gold-primary); margin-bottom: 1.5rem; }
+.skill-card h4 { font-size: 1.2rem; margin-bottom: 1rem; }
+.skill-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* --- CTA Section --- */
+.cta-title { font-size: 2.5rem; margin-bottom: 1.5rem; letter-spacing: -1px; }
+.cta-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+
+/* --- Footer & Dropdown --- */
+.footer { background-color: var(--text-dark); color: var(--bg-white); padding: 5rem 0 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+.footer-brand p { color: #888; margin-top: 1rem; font-size: 0.95rem; }
+.footer-links h4 { margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-primary); }
+
+.dropdown-container { position: relative; display: inline-block; }
+.dropdown-trigger { cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; padding-bottom: 0.5rem; border-bottom: 1px solid transparent; transition: var(--transition-smooth); }
+.dropdown-trigger:hover { color: var(--gold-primary); border-bottom: 1px solid var(--gold-primary); }
+
+.dropdown-menu {
+    position: absolute; bottom: 100%; left: 0; background: var(--bg-white); border: 1px solid var(--border-color);
+    min-width: 200px; padding: 1rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 10;
+}
+.dropdown-container:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(-10px); }
+.dropdown-menu a { display: block; padding: 0.8rem 1.5rem; color: var(--text-dark); text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.dropdown-menu a:hover { background: var(--bg-off-white); color: var(--gold-primary); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; color: #666; font-size: 0.85rem; }
+
+/* --- Animation Classes --- */
+.hidden { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+
+/* --- Extremely Mobile Responsive Setup --- */
+@media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-image-container { order: -1; max-width: 400px; margin: 0 auto; } /* Image moves to top on mobile */
+    .timeline-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+    .dropdown-menu { left: 50%; transform: translateX(-50%) translateY(10px); }
+    .dropdown-container:hover .dropdown-menu { transform: translateX(-50%) translateY(-10px); }
+    .dropdown-trigger { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .hero-actions { flex-direction: column; }
+    .nav-links { display: none; /* Hide standard links on small mobile to keep it clean */ }
+    .nav-content { justify-content: center; } /* Center logo */
+    .skills-grid { border: none; gap: 1.5rem; }
+    .skill-card { margin: 0; border: 1px solid var(--border-color); }
+}
+
+/* --- Social Icons --- */
+.nav-socials, .footer-socials {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+.nav-socials a, .footer-socials a {
+    color: var(--text-dark);
+    transition: var(--transition-smooth);
+    display: flex;
+}
+.footer-socials a { color: var(--bg-white); opacity: 0.8; margin-top: 1rem; }
+.nav-socials a:hover, .footer-socials a:hover {
+    color: var(--gold-primary);
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounceLogo 2.5s infinite;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+    animation: none;
+    transform: scale(1.1);
+    background-color: #20b858;
+}
+/* Bouncing Animation */
+@keyframes bounceLogo {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-7px); }
+}
+
+@media (max-width: 768px) {
+    .nav-socials { display: none; /* Keep mobile nav clean */ }
+    .whatsapp-float { bottom: 20px; left: 20px; width: 50px; height: 50px; }
+    .whatsapp-float svg { width: 24px; height: 24px; }
+}
