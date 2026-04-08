@@ -8,7 +8,7 @@
 This repository contains the source code for my professional portfolio, developed specifically to showcase my technical competencies, business acumen, and readiness for the corporate sector—with a focus on the financial services and technology industries.
 
 ## 🚀 Live Demo
-**[Insert Your Vercel Link Here Once Deployed]**
+**https://feiswal-old-mutual.vercel.app/**
 
 ## 🏗️ Architecture & Stack
 This project was built with a focus on performance, semantic structure, and native browser capabilities without the overhead of heavy frameworks:
@@ -24,4 +24,4 @@ This project was built with a focus on performance, semantic structure, and nati
 ## 📬 Contact
 * **Email:** feisaldindi4@gmail.com
 * **Phone:** +2547 6898 0297
-* **LinkedIn:** [Insert Link]
+* **LinkedIn:** https://www.linkedin.com/in/feiswal-dindi-onyango/
