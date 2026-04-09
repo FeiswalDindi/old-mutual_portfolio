@@ -13,12 +13,15 @@ This repository contains the source code for my professional portfolio, develope
 
 ### ✨ Experience the Portfolio Live
 
-[![View Live Demo](https://img.shields.io/badge/🌐_View_Live_Portfolio-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://feiswal-old-mutual.vercel.app/)
+**[🌐 VIEW LIVE PORTFOLIO](https://feiswal-old-mutual.vercel.app/)**
 
-**[→ Click here to view the live portfolio](https://feiswal-old-mutual.vercel.app/)**
+<a href="https://feiswal-old-mutual.vercel.app/" target="_blank">
+  <img src="https://api.microlink.io/?url=https://feiswal-old-mutual.vercel.app/&screenshot=true&embed=screenshot.url" alt="Portfolio Preview" width="100%" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+</a>
 
-#### Quick Preview of Hero Section
-*The portfolio features a modern, professional design with smooth animations and responsive layout across all devices.*
+**Click the preview above or the button below to explore the live site** 
+
+[![Vercel Deployment](https://img.shields.io/badge/🚀_Deployed_on_Vercel-black?style=for-the-badge&logo=vercel)](https://feiswal-old-mutual.vercel.app/)
 
 </div>
 
