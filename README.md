@@ -7,10 +7,20 @@
 ## 📌 Overview
 This repository contains the source code for my professional portfolio, developed specifically to showcase my technical competencies, business acumen, and readiness for the corporate sector—with a focus on the financial services and technology industries.
 
-## 🚀 Live Demo
-[![Vercel](https://img.shields.io/badge/View_Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://feiswal-old-mutual.vercel.app/)
+## 🚀 Live Demo & Preview
 
-**Click the badge above to view the live portfolio →** [https://feiswal-old-mutual.vercel.app/](https://feiswal-old-mutual.vercel.app/)
+<div align="center">
+
+### ✨ Experience the Portfolio Live
+
+[![View Live Demo](https://img.shields.io/badge/🌐_View_Live_Portfolio-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://feiswal-old-mutual.vercel.app/)
+
+**[→ Click here to view the live portfolio](https://feiswal-old-mutual.vercel.app/)**
+
+#### Quick Preview of Hero Section
+*The portfolio features a modern, professional design with smooth animations and responsive layout across all devices.*
+
+</div>
 
 ## 🏗️ Architecture & Stack
 This project was built with a focus on performance, semantic structure, and native browser capabilities without the overhead of heavy frameworks:
